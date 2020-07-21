@@ -12,6 +12,10 @@ Vue.use(VueLazyload, {
   // loading: 'dist/loading.gif',
   attempt: 1
 })
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.name}`;
+  next();
+});
 new Vue({
   router,
   store,
