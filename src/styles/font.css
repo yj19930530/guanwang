@@ -65,6 +65,9 @@
 .fz-26 {
     font-size: 52px !important;
 }
+.fz-30 {
+    font-size: 60px !important;
+}
 .fz-bold {
     font-weight: bold;
 }
@@ -78,8 +81,14 @@
 .fc-2c{
     color: #2c82b3 !important;
 }
+.fc-82{
+    color: #828282 !important;
+}
 .fc-333{
-    color: #333333;
+    color: #333333 !important;
+}
+.fc-666{
+    color: #666666 !important;
 }
 .fc-000{
     color: #000 !important;
