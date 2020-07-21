@@ -18,7 +18,7 @@ export default {
     return {
       timer: null,
       picWidth: 0,
-      wWidth: 0,
+      wWidth: 100,
       imgLength: 2,
       count: 1
     };
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     handleTimer() {
-        this.wWidth = document.documentElement.clientWidth;
+        // this.wWidth = document.body.clientWidth;
         const imgBox = document.getElementById("img-content");
         this.timer = setInterval(() => {
           this.count++;
@@ -38,8 +38,8 @@ export default {
             this.picWidth += this.wWidth;
             this.count = 1;
           }
-          imgBox.style.left = this.picWidth + "px";
-        }, 2000);
+          imgBox.style.left = this.picWidth + "%";
+        }, 5000);
     }
   }
 };
@@ -54,8 +54,7 @@ export default {
   overflow: hidden;
 }
 #img-content {
-  width: 100%;
-  height: 100%;
+  width: 200%;
   display: flex;
   flex-wrap: nowrap;
   position: absolute;
@@ -67,7 +66,7 @@ export default {
   /* float: left; */
 }
 .image-style {
-  /* width: 100%; */
+  width: 100%;
   height: auto;
 }
 </style>
