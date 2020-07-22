@@ -1,72 +1,151 @@
 /* 字体大小 */
-.fz-5 {
-    font-size: 10px !important;
+@media screen and (max-width: 1920px) {
+    .fz-5 {
+        font-size: 10px !important;
+    }
+    .fz-6 {
+        font-size: 12px !important;
+    }
+    .fz-7 {
+        font-size: 14px !important;
+    }
+    .fz-8 {
+        font-size: 16px !important;
+    }
+    .fz-9 {
+        font-size: 18px !important;
+    }
+    .fz-10 {
+        font-size: 20px !important;
+    }
+    .fz-11 {
+        font-size: 22px !important;
+    }
+    .fz-12 {
+        font-size: 24px !important;
+    }
+    .fz-13 {
+        font-size: 26px !important;
+    }
+    .fz-14 {
+        font-size: 28px !important;
+    }
+    .fz-15 {
+        font-size: 30px !important;
+    }
+    .fz-16 {
+        font-size: 32px !important;
+    }
+    .fz-17 {
+        font-size: 34px !important;
+    }
+    .fz-18 {
+        font-size: 36px !important;
+    }
+    .fz-19 {
+        font-size: 38px !important;
+    }
+    .fz-20 {
+        font-size: 40px !important;
+    }
+    .fz-21 {
+        font-size: 42px !important;
+    }
+    .fz-22 {
+        font-size: 44px !important;
+    }
+    .fz-23 {
+        font-size: 46px !important;
+    }
+    .fz-24 {
+        font-size: 48px !important;
+    }
+    .fz-25 {
+        font-size: 50px !important;
+    }
+    .fz-26 {
+        font-size: 52px !important;
+    }
+    .fz-30 {
+        font-size: 60px !important;
+    }
+    .fz-32 {
+        font-size: 64px !important;
+    }
 }
-.fz-6 {
-    font-size: 12px !important;
-}
-.fz-7 {
-    font-size: 14px !important;
-}
-.fz-8 {
-    font-size: 16px !important;
-}
-.fz-9 {
-    font-size: 18px !important;
-}
-.fz-10 {
-    font-size: 20px !important;
-}
-.fz-11 {
-    font-size: 22px !important;
-}
-.fz-12 {
-    font-size: 24px !important;
-}
-.fz-13 {
-    font-size: 26px !important;
-}
-.fz-14 {
-    font-size: 28px !important;
-}
-.fz-15 {
-    font-size: 30px !important;
-}
-.fz-16 {
-    font-size: 32px !important;
-}
-.fz-17 {
-    font-size: 34px !important;
-}
-.fz-18 {
-    font-size: 36px !important;
-}
-.fz-19 {
-    font-size: 38px !important;
-}
-.fz-20 {
-    font-size: 40px !important;
-}
-.fz-21 {
-    font-size: 42px !important;
-}
-.fz-22 {
-    font-size: 44px !important;
-}
-.fz-23 {
-    font-size: 46px !important;
-}
-.fz-24 {
-    font-size: 48px !important;
-}
-.fz-25 {
-    font-size: 50px !important;
-}
-.fz-26 {
-    font-size: 52px !important;
-}
-.fz-30 {
-    font-size: 60px !important;
+@media screen and (max-width: 1400px) {
+    .fz-5 {
+        font-size: 10px !important;
+    }
+    .fz-6 {
+        font-size: 12px !important;
+    }
+    .fz-7 {
+        font-size: 14px !important;
+    }
+    .fz-8 {
+        font-size: 16px !important;
+    }
+    .fz-9 {
+        font-size: 18px !important;
+    }
+    .fz-10 {
+        font-size: 20px !important;
+    }
+    .fz-11 {
+        font-size: 22px !important;
+    }
+    .fz-12 {
+        font-size: 24px !important;
+    }
+    .fz-13 {
+        font-size: 26px !important;
+    }
+    .fz-14 {
+        font-size: 28px !important;
+    }
+    .fz-15 {
+        font-size: 30px !important;
+    }
+    .fz-16 {
+        font-size: 32px !important;
+    }
+    .fz-17 {
+        font-size: 34px !important;
+    }
+    .fz-18 {
+        font-size: 36px !important;
+    }
+    .fz-19 {
+        font-size: 38px !important;
+    }
+    .fz-20 {
+        font-size: 40px !important;
+    }
+    .fz-21 {
+        font-size: 42px !important;
+    }
+    .fz-22 {
+        font-size: 44px !important;
+    }
+    .fz-23 {
+        font-size: 46px !important;
+    }
+    .fz-24 {
+        font-size: 48px !important;
+    }
+    .fz-25 {
+        font-size: 50px !important;
+    }
+    .fz-26 {
+        font-size: 52px !important;
+    }
+    .fz-30 {
+        font-size: 40px !important;
+    }
+    .fz-32 {
+        font-size: 64px !important;
+    }
 }
 .fz-bold {
     font-weight: bold;
@@ -96,6 +175,9 @@
 .fc-fff{
     color: #fff !important;
 }
+.fc-7d{
+    color: #7D7D7D !important;
+}
 .fc-409{
     color: #409EFF !important;
 }
@@ -119,11 +201,25 @@
     align-items: center;
     justify-content: space-between;
 }
+.fl-ar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .fl-co{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.fl-co2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fl-fo{
+    display: flex;
+    flex-direction: column;
 }
 .fl-al {
     display: flex;

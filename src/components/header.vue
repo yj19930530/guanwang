@@ -32,7 +32,7 @@ export default {
       navList: [
         {
           name: "网站首页",
-          type: true,
+          type: false,
           router: "/homePage"
         },
         {
@@ -58,7 +58,23 @@ export default {
       ]
     };
   },
+  mounted() {
+    const timer = setTimeout(() => {
+      this.firstChange();
+      clearTimeout(timer);
+    }, 100);
+  },
   methods: {
+    firstChange() {
+      const path = this.$route.path;
+      this.navList.forEach(item => {
+        if (item.router === path) {
+          item.type = true;
+        } else {
+          item.type = false;
+        }
+      });
+    },
     chnageType(index) {
       this.navList.forEach((item, i) => {
         if (i === index) {

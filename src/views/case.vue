@@ -16,53 +16,56 @@
       </div>
     </div>
     <!-- qiye -->
-    <ul class="fl-bt" id="enterprise-list">
-      <li class="enterprise-item-content">
-        <img class="enterprise-item-img" src="../image/pic1.png" alt />
-        <div class="text-title">
-          <span class="fz-10 fc-333">企业名字</span>
-        </div>
-        <div class="text-slo">
-          <span class="fz-8 fc-82">企业的slogan</span>
-        </div>
-      </li>
-      <li class="enterprise-item-content">
-        <img class="enterprise-item-img" src="../image/pic1.png" alt />
-        <div class="text-title">
-          <span class="fz-10 fc-333">企业名字</span>
-        </div>
-        <div class="text-slo">
-          <span class="fz-8 fc-82">企业的slogan</span>
-        </div>
-      </li>
-      <li class="enterprise-item-content">
-        <img class="enterprise-item-img" src="../image/pic1.png" alt />
-        <div class="text-title">
-          <span class="fz-10 fc-333">企业名字</span>
-        </div>
-        <div class="text-slo">
-          <span class="fz-8 fc-82">企业的slogan</span>
-        </div>
-      </li>
-      <li class="enterprise-item-content">
-        <img class="enterprise-item-img" src="../image/pic1.png" alt />
-        <div class="text-title">
-          <span class="fz-10 fc-333">企业名字</span>
-        </div>
-        <div class="text-slo">
-          <span class="fz-8 fc-82">企业的slogan</span>
-        </div>
-      </li>
-    </ul>
-    <div class="fl-center loading-content">
-      <img class="shuaxin-img" src="../image/shuaxin.png" alt="刷新" />
-      <span class="fz-8 fc-666">加载更多案例</span>
+    <div>
+      <ul class="fl-bt" id="enterprise-list">
+        <li class="enterprise-item-content">
+          <img class="enterprise-item-img" src="../image/pic1.png" alt />
+          <div class="text-title">
+            <span class="fz-10 fc-333">企业名字</span>
+          </div>
+          <div class="text-slo">
+            <span class="fz-8 fc-82">企业的slogan</span>
+          </div>
+        </li>
+        <li class="enterprise-item-content">
+          <img class="enterprise-item-img" src="../image/pic1.png" alt />
+          <div class="text-title">
+            <span class="fz-10 fc-333">企业名字</span>
+          </div>
+          <div class="text-slo">
+            <span class="fz-8 fc-82">企业的slogan</span>
+          </div>
+        </li>
+        <li class="enterprise-item-content">
+          <img class="enterprise-item-img" src="../image/pic1.png" alt />
+          <div class="text-title">
+            <span class="fz-10 fc-333">企业名字</span>
+          </div>
+          <div class="text-slo">
+            <span class="fz-8 fc-82">企业的slogan</span>
+          </div>
+        </li>
+        <li class="enterprise-item-content">
+          <img class="enterprise-item-img" src="../image/pic1.png" alt />
+          <div class="text-title">
+            <span class="fz-10 fc-333">企业名字</span>
+          </div>
+          <div class="text-slo">
+            <span class="fz-8 fc-82">企业的slogan</span>
+          </div>
+        </li>
+      </ul>
+      <div class="fl-center loading-content">
+        <img class="shuaxin-img" src="../image/shuaxin.png" alt="刷新" />
+        <span class="fz-8 fc-666">加载更多案例</span>
+      </div>
     </div>
   </div>
 </template>
 <style scoped>
 #case-container {
   height: 100%;
+  /* overflow-y: scroll; */
 }
 #top-content-img {
   position: relative;
