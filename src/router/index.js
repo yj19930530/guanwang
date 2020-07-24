@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+  // PC 端
   {
     path: '/',
     name: 'home',
@@ -53,10 +54,28 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/caseDetails',
+    name: 'caseDetails',
+    component: () => import('@/views/caseDetails.vue'),
+    meta: {
+      name: '案例详情'
+    }
+  },
+  {
+    path: '/newsDetails',
+    name: 'newsDetails',
+    component: () => import('@/views/newsDetails.vue'),
+    meta: {
+      name: '新闻详情'
+    }
+  },
+  // 移動端
+  {
+    path: '/mobileHome',
+    name: 'mobileHome',
+    component: () => import('../views/mobile/homePage.vue')
+  },
+
 ]
 
 const router = new VueRouter({

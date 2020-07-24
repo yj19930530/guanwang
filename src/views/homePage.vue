@@ -158,6 +158,34 @@
         <img class="img-style-log" src="../image/picture6.png" alt />
       </div>
     </div>
+    <div id="home-news-content">
+      <img class="left-img-news" src="../image/picture8.png" alt />
+      <div class="home-news-right">
+        <div class="fl-bt home-news-title">
+          <span class="fz-25 news-title-text">新闻资讯 让价值共享</span>
+          <div class="fl-al">
+            <div class="sanjiao"></div>
+            <span class="fz-13">more</span>
+          </div>
+        </div>
+        <div>
+          <div class="new-article-content fl-bt" v-for="item in 4" :key="item">
+            <img class="news-img-style" src="../image/picture1.png" alt />
+            <div class="article-right-box">
+              <div class="fl-bt">
+                <span class="fz-12">网站建设对于企业的重要作用有哪些呢？</span>
+                <span class="fz-12">2020-7-8</span>
+              </div>
+              <div class="news-detail-box">
+                <span
+                  class="fz-8"
+                >网站建设对于企业有哪些重要作用：1、有利于提升企业形象。网站的形象代表着企业网上的品牌形象，大众在网上了解一个企业的方式就是访问该公司的网站…[ 详细 ]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -168,7 +196,7 @@ export default {
       picWidth: 0,
       wWidth: 100,
       imgLength: 2,
-      count: 1
+      count: 1,
     };
   },
   mounted() {
@@ -211,166 +239,10 @@ export default {
       }
       imgBox.style.left = this.picWidth + "%";
       this.handleTimer();
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
-#home-page-container {
-  min-width: 1200px;
-  height: 100%;
-}
-#pic-play-content {
-  height: 50vw;
-  position: relative;
-  overflow: hidden;
-}
-#img-content {
-  width: 200%;
-  display: flex;
-  flex-wrap: nowrap;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: all 1s;
-}
-.img-item {
-  position: relative;
-}
-.image-style {
-  width: 100%;
-  height: auto;
-}
-.switch-img-content {
-  width: 20%;
-  height: 11%;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 17;
-  box-shadow: 0 0 4px #999;
-}
-.switch-img-content img {
-  cursor: pointer;
-}
-.text-content {
-  position: absolute;
-  left: 10%;
-  bottom: 35%;
-  z-index: 7;
-}
-.text-item-so {
-  margin-top: 20px;
-  width: 70%;
-}
-.title-img-style {
-  margin-top: 10px;
-  padding-bottom: 20px;
-  width: 450px;
-  border-bottom: 3px solid #ffb626;
-}
-.img-item-two {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9;
-}
-.mar-top-50 {
-  margin-top: 50px;
-}
-.mar-top-150 {
-  margin-top: 190px;
-}
-.app-title-text {
-  margin-top: 80px;
-}
-.app-mar-top1 {
-  margin-top: 70px;
-}
-.app-container {
-  margin-top: 86px;
-}
-.app-mar-top2 {
-  margin-top: 30px;
-}
-.app-mar-top3 {
-  margin-top: 30px;
-}
-.app-mar-top4 {
-  margin-top: 30px;
-}
-.app-mar-top5 {
-  margin-top: 50px;
-}
-.app-item-box {
-  overflow: hidden;
-}
-.app-item-name {
-  float: left;
-  width: 50%;
-}
-.app-item-img img {
-  width: 180px;
-  height: 180px;
-}
-.app-item-container {
-  width: 276px;
-  height: 428px;
-  margin-right: 2px;
-  border: 1px solid #828282;
-}
-.app-item-img {
-  border: 1px dashed #333333;
-}
-.yuan-style {
-  margin-left: 18px;
-  margin-right: 6px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #828282;
-}
-#about-us-container {
-  margin-top: 250px;
-  width: 100%;
-}
-.about-us-left {
-  width: 72%;
-}
-.about-us-right {
-  width: 28%;
-}
-.us-details-text {
-  width: 50%;
-}
-.top-back-content {
-  height: 400px;
-  padding-left: 50px;
-}
-.bottom-back-content {
-  position: relative;
-  height: 400px;
-}
-.bottom-back-content img{
-  width: 100%;
-  height: 100%;
-}
-.bottom-back-position {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding-left: 50px;
-  padding-top: 90px;
-}
-.img-style-log {
-  height: 400px;
-}
-.box-wdith {
-  width: 30%;
-}
+@import "../styles/css/homePage.css";
 </style>

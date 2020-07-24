@@ -1,0 +1,182 @@
+
+@media screen and (max-width: 1920px) {
+    #case-container {
+        height: 100%;
+    }
+    #top-content-img {
+        position: relative;
+        width: 100%;
+    }
+    .img-style {
+        width: 100%;
+        height: auto;
+    }
+    .img-text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .mar-30 {
+        margin-top: 30px;
+    }
+    .mar-10 {
+        margin-top: 6px;
+    }
+    .img-text-bottom {
+        width: 1000px;
+        text-align: center;
+    }
+    .item-left-text {
+        width: 50%;
+        height: 530px;
+    }
+    .app-yuandian {
+        margin-right: 16px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #828282;
+    }
+    .item-right-img {
+        width: 50%;
+        height: 530px;
+    }
+    .business-app-item {
+        padding: 120px 0 0 100px;
+    }
+    .option-app-item {
+        margin-top: 36px;
+    }
+    .mr-r-70{
+        margin-right: 70px;
+    }
+    .mr-r-6{
+        margin-right: 6px;
+    }
+    .app-title-box {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #case-container {
+        height: 100%;
+    }
+    #top-content-img {
+        position: relative;
+        width: 100%;
+    }
+    .img-style {
+        width: 100%;
+        height: auto;
+    }
+    .img-text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .mar-30 {
+        margin-top: 30px;
+    }
+    .mar-10 {
+        margin-top: 6px;
+    }
+    .img-text-bottom {
+        width: 1000px;
+        text-align: center;
+    }
+    .item-left-text {
+        width: 50%;
+        height: 444px;
+    }
+    .app-yuandian {
+        margin-right: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #828282;
+    }
+    .item-right-img {
+        width: 50%;
+        height: 444px;
+    }
+    .business-app-item {
+        padding: 100px 0 0 82px;
+    }
+    .option-app-item {
+        margin-top: 36px;
+    }
+    .mr-r-70{
+        margin-right: 70px;
+    }
+    .mr-r-6{
+        margin-right: 6px;
+    }
+    .app-title-box {
+        width: 240px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .app-title-box {
+        width: 140px;
+    }
+    #case-container {
+        height: 100%;
+    }
+    #top-content-img {
+        position: relative;
+        width: 100%;
+    }
+    .img-style {
+        width: 100%;
+        height: auto;
+    }
+    .img-text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .mar-30 {
+        margin-top: 20px;
+    }
+    .mar-10 {
+        margin-top: 6px;
+    }
+    .img-text-bottom {
+        width: 1000px;
+        text-align: center;
+    }
+    .item-left-text {
+        width: 50%;
+        height: 386px;
+    }
+    .app-yuandian {
+        margin-right: 8px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #828282;
+    }
+    .item-right-img {
+        width: 50%;
+        height: 386px;
+    }
+    .business-app-item {
+        padding: 88px 0 0 74px;
+    }
+    .option-app-item {
+        margin-top: 36px;
+    }
+    .mr-r-70{
+        margin-right: 70px;
+    }
+    .mr-r-6{
+        margin-right: 6px;
+    }
+}

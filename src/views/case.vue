@@ -65,6 +65,7 @@
 <style scoped>
 #case-container {
   height: 100%;
+  padding-bottom: 150px;
   /* overflow-y: scroll; */
 }
 #top-content-img {

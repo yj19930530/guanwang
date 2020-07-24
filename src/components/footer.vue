@@ -38,7 +38,7 @@
 }
 .input-style {
   padding-left: 20px;
-  width: 20%;
+  width: 350px;
   height: 50px;
   border: none;
   outline-color: #d12e2e;
@@ -47,7 +47,7 @@
 }
 .get-price-btn {
   cursor: pointer;
-  width: 10%;
+  width: 150px;
   height: 50px;
   background-color: #333;
   border-radius: 4px;

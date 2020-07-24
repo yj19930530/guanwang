@@ -67,6 +67,7 @@ export default {
   methods: {
     firstChange() {
       const path = this.$route.path;
+      if (path === "/") return (this.navList[0].type = true);
       this.navList.forEach(item => {
         if (item.router === path) {
           item.type = true;

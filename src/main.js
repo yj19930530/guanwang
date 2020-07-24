@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import '@/styles/reset.css';
 import '@/styles/font.css';
+import { isMobile } from './utils/common';
 Vue.config.productionTip = false
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {
@@ -13,6 +14,7 @@ Vue.use(VueLazyload, {
   attempt: 1
 })
 router.beforeEach((to, from, next) => {
+  console.log(isMobile(), 'in')
   document.title = `${to.meta.name}`;
   next();
 });
