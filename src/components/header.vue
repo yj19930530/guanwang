@@ -1,11 +1,7 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">首页</router-link>|
-    <router-link to="/about">About</router-link>
-  </div>-->
   <header id="top-header-container">
     <div id="header-content" class="fl-bt">
-      <img src="@/image/logo.png" alt="logo" />
+      <img class="logo-style" src="@/image/logo.png" alt="logo" />
       <nav class="fl-al">
         <div class="fl-bt" id="nav-item-content">
           <div class="fl-al" v-for="(item,index) in navList" :key="index">
@@ -17,9 +13,6 @@
               <span class="fz-10" :class="[item.type?'fc-2c':'']">{{item.name}}</span>
             </div>
           </div>
-        </div>
-        <div class="fl-al nav-item">
-          <img src="@/image/menu.png" alt="logo" />
         </div>
       </nav>
     </div>
@@ -113,5 +106,9 @@ export default {
 #nav-item-content {
   margin-right: 50px;
   width: 582px;
+}
+.logo-style {
+  width: 168px;
+  height: 44px;
 }
 </style>

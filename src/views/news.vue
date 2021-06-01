@@ -34,25 +34,24 @@
     </div>
     <div class="new-list-box fl-co">
       <div
-        class="news-item-box fl-bt"
-        v-for="item in 4"
-        :key="item"
+        class="news-item-box fl-ft"
+        v-for="(item,index) in newsList"
+        :key="index"
         :class="[item===1?'news-item-box2':'']"
+        @click="getInfoDetails(item)"
       >
-        <img class="news-item-img" src="../image/picture1.png" alt />
-        <div class="news-item-rigth">
+        <img class="news-item-img" :src="item.imgUrl" alt />
+        <div class="news-item-rigth" style="margin-left:20px">
           <div class="fl-bt news-item-title">
-            <span class="fz-17">网站建设对于企业的重要作用有哪些呢？</span>
-            <span class="fz-17 fc-666">2020-7-8</span>
+            <span class="fz-17">{{item.title}}</span>
+            <span class="fz-17 fc-666">{{dateTime(item.createTime)}}</span>
           </div>
           <div class="news-item-atic">
-            <span
-              class="fz-11"
-            >网站建设对于企业有哪些重要作用：1、有利于提升企业形象。网站的形象代表着企业网上的品牌形象，大众在网上了解一个企业的方式就是访问该公司的网站…[ 详细 ]</span>
+            <span class="fz-11">{{reText(item.listInfo)}}</span>
           </div>
         </div>
       </div>
-      <div class="get-more-news fl-center">
+      <div class="get-more-news fl-center cu-p-style" v-if="more" @click="getMoreData">
         <img src="../image/shuaxin.png" class="mr-r-10" alt />
         <span>加载更多新闻</span>
       </div>
@@ -60,24 +59,95 @@
   </div>
 </template>
 <script>
+import { getNewsPage, newsCount } from "../api/news";
 export default {
   data() {
     return {
       leftTabsType: true,
-      rightTabsType: false
+      rightTabsType: false,
+      newsList: [],
+      total: 0,
+      pageNo: 1,
+      pageSize: 4,
+      newsType: 1,
+      more: false,
     };
   },
+  mounted() {
+    this.getNewsList();
+  },
   methods: {
+    reText(text) {
+      if (text.length > 80) {
+        text = text.substring(0, 80);
+        return text + " ...[详细]";
+      } else {
+        return text;
+      }
+    },
+    async getInfoDetails(row) {
+      if (row.jumpState === 1) {
+        await newsCount({
+          id: row.id,
+        });
+        this.$router.push(`/newsDetails?id=${row.id}`);
+      } else {
+        window.open(row.linkUrl);
+      }
+    },
     tabsChange(type) {
       if (type === 1) {
+        if (this.leftTabsType) return;
         this.leftTabsType = true;
         this.rightTabsType = false;
       } else {
+        if (this.rightTabsType) return;
         this.rightTabsType = true;
         this.leftTabsType = false;
       }
-    }
-  }
+      this.newsType = type;
+      this.pageNo = 1;
+      this.getNewsList();
+    },
+    async getMoreData() {
+      if (!this.more) return;
+      this.pageNo++;
+      const { data } = await getNewsPage({
+        pageNo: this.pageNo,
+        pageSize: this.pageSize,
+        newsType: this.newsType,
+      });
+      if (data.list.length) {
+        this.newsList = [...this.newsList, ...data.list];
+      }
+      if (this.newsList.length === this.total) {
+        this.more = false;
+      } else {
+        this.more = true;
+      }
+    },
+    async getNewsList() {
+      const { data } = await getNewsPage({
+        pageNo: this.pageNo,
+        pageSize: this.pageSize,
+        newsType: this.newsType,
+      });
+      this.newsList = data.list;
+      this.total = data.total;
+      if (this.newsList.length === this.total) return (this.more = false);
+      this.more = true;
+    },
+    dateTime(time) {
+      let date = new Date(time);
+      let year = date.getFullYear();
+      let month =
+        date.getMonth() + 1 >= 10
+          ? date.getMonth() + 1
+          : "0" + (date.getMonth() + 1);
+      let day = date.getDate() >= 10 ? date.getDate() : "0" + date.getDate();
+      return `${year}-${month}-${day}`;
+    },
+  },
 };
 </script>
 <style scoped>
@@ -90,5 +160,8 @@ export default {
   position: absolute;
   left: 6%;
   top: 50%;
+}
+.cu-p-style {
+  cursor: pointer;
 }
 </style>

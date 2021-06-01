@@ -193,7 +193,7 @@
         /* margin-bottom: 40px; */
       }
       .article-right-box {
-        margin-right: 24px;
+        margin-left: 24px;
         width: 75%;
         /* padding: 0 60px 0 32px; */
       }
@@ -398,7 +398,7 @@
         width: 55%;
       }
       .article-right-box {
-        margin-right: 22px;
+        margin-left: 22px;
         width: 75%;
       }
       .news-detail-box {
@@ -609,7 +609,7 @@
         /* margin-bottom: 20px; */
       }
       .article-right-box {
-        margin-right: 20px;
+        margin-left: 20px;
         width: 75%;
         /* padding: 0 40px 0 18px; */
       }

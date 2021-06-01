@@ -26,11 +26,11 @@
         </li>
       </ul>
       <!-- 轮播图下面的的按钮 -->
-      <div class="switch-img-content fl-ar">
+      <!-- <div class="switch-img-content fl-ar">
         <img @click="leftChange" src="../image/leftjiao.png" alt />
         <span class="fc-7d">|</span>
         <img @click="rightChange" src="../image/rightjiao.png" alt />
-      </div>
+      </div>-->
     </div>
     <div id="app-details-content" class="fl-co">
       <div class="fl-co app-title-text">
@@ -149,7 +149,9 @@
           <img src="../image/picture7.png" alt />
           <div class="bottom-back-position">
             <span class="fz-13 fc-fff">以独特的视角诠释品牌的内涵</span>
-            <div class="fz-9 app-mar-top5 box-wdith fc-fff">我们帮助品牌成长，为品牌提升价值。四方创享不遗余力地为客户提供专业靠谱的服务。</div>
+            <div
+              class="fz-9 app-mar-top5 box-wdith fc-fff sc-style"
+            >我们帮助品牌成长，为品牌提升价值。四方创享不遗余力地为客户提供专业靠谱的服务。</div>
           </div>
         </div>
       </div>
@@ -163,23 +165,26 @@
       <div class="home-news-right">
         <div class="fl-bt home-news-title">
           <span class="fz-25 news-title-text">新闻资讯 让价值共享</span>
-          <div class="fl-al">
+          <div class="fl-al cu-style" @click="getMore">
             <div class="sanjiao"></div>
             <span class="fz-13">more</span>
           </div>
         </div>
         <div>
-          <div class="new-article-content fl-bt" v-for="item in 4" :key="item">
-            <img class="news-img-style" src="../image/picture1.png" alt />
+          <div
+            class="new-article-content fl-fb"
+            v-for="(item,index) in newsList"
+            :key="index"
+            @click="getInfoDetails(item)"
+          >
+            <img class="news-img-style" :src="item.imgUrl" alt />
             <div class="article-right-box">
               <div class="fl-bt">
-                <span class="fz-12">网站建设对于企业的重要作用有哪些呢？</span>
-                <span class="fz-12">2020-7-8</span>
+                <span class="fz-12">{{item.title}}</span>
+                <span class="fz-12">{{dateTime(item.createTime)}}</span>
               </div>
               <div class="news-detail-box">
-                <span
-                  class="fz-8"
-                >网站建设对于企业有哪些重要作用：1、有利于提升企业形象。网站的形象代表着企业网上的品牌形象，大众在网上了解一个企业的方式就是访问该公司的网站…[ 详细 ]</span>
+                <span class="fz-8">{{reText(item.listInfo)}}</span>
               </div>
             </div>
           </div>
@@ -189,7 +194,9 @@
   </div>
 </template>
 <script>
+import { getNewsPage, newsCount } from "../api/news";
 export default {
+  inject: ["reload"],
   data() {
     return {
       timer: null,
@@ -197,17 +204,57 @@ export default {
       wWidth: 100,
       imgLength: 2,
       count: 1,
+      newsList: [],
     };
   },
   mounted() {
+    this.getNewsList();
     this.handleTimer();
   },
   destroyed() {
     clearInterval(this.timer);
   },
   methods: {
+    async getInfoDetails(row) {
+      if (row.jumpState === 1) {
+        await newsCount({
+          id: row.id,
+        });
+        this.$router.push(`/newsDetails?id=${row.id}`);
+      } else {
+        window.open(row.linkUrl);
+      }
+    },
+    reText(text) {
+      if (text.length > 80) {
+        text = text.substring(0, 80);
+        return text + " ...[详细]";
+      } else {
+        return text;
+      }
+    },
+    getMore() {
+      this.$router.push("/news");
+      this.reload();
+    },
+    dateTime(time) {
+      let date = new Date(time);
+      let year = date.getFullYear();
+      let month =
+        date.getMonth() + 1 >= 10
+          ? date.getMonth() + 1
+          : "0" + (date.getMonth() + 1);
+      let day = date.getDate() >= 10 ? date.getDate() : "0" + date.getDate();
+      return `${year}-${month}-${day}`;
+    },
+    async getNewsList() {
+      const { data } = await getNewsPage({
+        pageNo: 1,
+        pageSize: 4,
+      });
+      this.newsList = data.list;
+    },
     handleTimer() {
-      // this.wWidth = document.body.clientWidth;
       const imgBox = document.getElementById("img-content");
       this.timer = setInterval(() => {
         this.count++;
@@ -245,4 +292,10 @@ export default {
 </script>
 <style scoped>
 @import "../styles/css/homePage.css";
-</style>
+.cu-style {
+  cursor: pointer;
+}
+.sc-style {
+  line-height: 1.6;
+}
+</style>  

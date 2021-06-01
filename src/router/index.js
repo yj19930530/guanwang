@@ -73,7 +73,50 @@ const routes = [
   {
     path: '/mobileHome',
     name: 'mobileHome',
-    component: () => import('../views/mobile/homePage.vue')
+    component: () => import('../views/mobile/homePage.vue'),
+    meta: {
+      name: '首页'
+    }
+  },
+  {
+    path: '/mobileCase',
+    name: 'mobileCase',
+    component: () => import('../views/mobile/case.vue'),
+    meta: {
+      name: '成功案例'
+    }
+  },
+  {
+    path: '/mobileBusiness',
+    name: 'mobileBusiness',
+    component: () => import('../views/mobile/business.vue'),
+    meta: {
+      name: '业务范围'
+    }
+  },
+  {
+    path: '/mobileNews',
+    name: 'mobileNews',
+    component: () => import('../views/mobile/news.vue'),
+    meta: {
+      name: '新闻中心'
+    }
+  },
+  {
+    path: '/mobileUs',
+    name: 'mobileUs',
+    component: () => import('../views/mobile/us.vue'),
+    meta: {
+      name: '联系我们'
+    }
+  },
+  {
+    path: '/mobileNewsDetails',
+    name: 'mobileNewsDetails',
+    component: () => import('../views/mobile/newsDetails.vue'),
+    meta: {
+      name: '新闻详情'
+    }
   },
 
 ]

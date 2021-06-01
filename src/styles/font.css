@@ -264,6 +264,9 @@
 .fc-ylow{
     color: #f46e0c !important;
 }
+.fc-2b{
+    color: #2B80B4 !important;
+}
 /* 布局 */
 .fl-center{
     display: flex;
@@ -273,6 +276,10 @@
 .fl-bt{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.fl-fb{
+    display: flex;
     justify-content: space-between;
 }
 .fl-ar{

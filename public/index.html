@@ -4,10 +4,33 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
   <meta name="viewport"
     content="width=device-width, user-scalable=yes, initial-scale=0.3, maxmum-scale=1.0, minimum-scale=0.3">
+  <meta name="description"
+    content="四方、创享、智慧社区、智慧医疗、垃圾分类、小程序开发、APP开发、系统开发、软件开发、四方创享、创新、共享、软件外包、网页制作、品牌设计、物联网开发、定制开发、成都四方、创享网络、智慧垃圾分类、智慧物业、小区安防、人脸识别、智慧门禁、智慧停车、解决方案" />
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <title><%= htmlWebpackPlugin.options.title %></title>
+  <script>
+    let mobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+    const deviceType = mobile != null;
+    if (deviceType) {
+      var script = document.createElement("script");
+      script.src = './mobile.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    } 
+  </script>
+  <style>
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: none;
+    }
+
+    span {
+      word-wrap: break-word;
+      white-space: normal;
+    }
+  </style>
 </head>
 
 <body>
